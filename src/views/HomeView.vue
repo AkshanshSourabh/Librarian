@@ -1,5 +1,7 @@
 <template>
-    <div>Welcome to Library</div>
+    <div :style = "`background-color:${randomColor()}`">
+      <h1>Welcome to Library</h1>
+    </div>
 </template>
 
 <script>
