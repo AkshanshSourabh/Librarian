@@ -1,5 +1,5 @@
 <template>
-  <hello-world />
+    <div>Welcome to Library</div>
 </template>
 
 <script>
