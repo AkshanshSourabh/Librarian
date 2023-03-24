@@ -9,7 +9,8 @@
             <v-list-item-content>
                 <v-list-item-title v-text="item.returnDate"></v-list-item-title>
             </v-list-item-content>
-
+            <v-divider vertical></v-divider> 
+            
             <v-list-item-content>
                 <v-list-item-title v-text="item.book.title"></v-list-item-title>
                 <v-list-item-subtitle v-text="item.member.name"></v-list-item-subtitle>
