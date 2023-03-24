@@ -29,17 +29,17 @@
                             </v-list-item>
                             <v-list-item>
                                 <v-list-item-title>Delete</v-list-item-title>
-                                <v-icon>mdi-pencil</v-icon>
+                                <v-icon>mdi-delete</v-icon>
 
                             </v-list-item>
                             <v-list-item>
                                 <v-list-item-title>Issue</v-list-item-title>
-                                <v-icon>mdi-pencil</v-icon>
+                                <v-icon>mdi-plus</v-icon>
 
                             </v-list-item>
                             <v-list-item>
                                 <v-list-item-title>Return</v-list-item-title>
-                                <v-icon>mdi-pencil</v-icon>
+                                <v-icon>mdi-keyboard-return</v-icon>
 
                             </v-list-item>
                         </v-list>

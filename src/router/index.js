@@ -50,6 +50,21 @@ const routes = [
   },
   {
     path: '/books/bookview/:id'
+  },
+  {
+    path: '/authors',
+    name: 'Authors',
+    component: () => import('../views/Authors.vue')
+  },
+  {
+    path: '/categories',
+    name: 'Categories',
+    component: () => import('../views/Categories.vue')
+  },
+  {
+    path: '/issues',
+    name: 'Issues',
+    component: () => import('../views/Issues.vue')
   }
   // {
   //   path: '/about',
