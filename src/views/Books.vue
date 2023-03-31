@@ -70,10 +70,10 @@ export default {
     methods:{
         searchInBooks(searchText){
           if (typeof searchText === "string"){
-            this.books = BooksList.filter(rec => rec.title.toLowerCase().includes(searchText.value.toLowerCase()))
+            this.books = BooksList.filter(rec => rec.title.toLowerCase().includes(searchText.toLowerCase()))
           }
           else{
-          // console.log(searchText);
+            this.books = BooksList
           }
         }
     }

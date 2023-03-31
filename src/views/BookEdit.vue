@@ -14,12 +14,13 @@
         data() {
             return {
                 id: 0,
-                book: {}
+                book: {},
+
             }
         },
         mounted () {
             this.id = this.$route.params.id;
-            this.book = bookslist.find(rec => rec = rec._id)
+            this.book = booksList.find(rec => rec._id == this.id)
         },
         
 
