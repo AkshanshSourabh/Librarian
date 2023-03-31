@@ -1,6 +1,6 @@
 <template>
 <div>
-    <app-header :title="mytitle"></app-header>
+    <app-header :title="mytitle" @add="$router.push('/authors/0')" @search ="searchInAuthors($event)"></app-header>
     <v-list>
         <v-list-item v-for="(item,i) in authors" :key="i">
 
@@ -16,7 +16,7 @@
                 </template>
                 <v-list>
                     <v-list>
-                            <v-list-item>
+                            <v-list-item @click="$router.push('/authors/' + item._id)">
                                 <v-list-item-title>Edit</v-list-item-title>
                                 <v-icon>mdi-pencil</v-icon>
                             </v-list-item>
@@ -46,6 +46,16 @@ export default {
     },
     components: {
         AppHeader
+    },
+    methods:{
+        searchInAuthors(searchText){
+          if (typeof searchText === "string"){
+            this.authors = AuthorsList.filter(rec => rec.name.toLowerCase().includes(searchText.toLowerCase()))
+          }
+          else{
+            this.authors = AuthorsList
+          }
+        }
     }
 }
 </script>

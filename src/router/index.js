@@ -64,6 +64,11 @@ const routes = [
     component: () => import('../views/Authors.vue')
   },
   {
+    path: '/authors/:id',
+    nsme: 'authorEdit',
+    component: () => import('../views/AuthorEdit.vue')
+  },
+  {
     path: '/categories',
     name: 'Categories',
     component: () => import('../views/Categories.vue')
