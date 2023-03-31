@@ -49,7 +49,14 @@ const routes = [
     component: () => import('../views/Books.vue')
   },
   {
-    path: '/books/bookview/:id'
+    path: '/books/view/:id',
+    nsme: 'bookEdit',
+    component: () => import('../views/BookView.vue')
+  },
+  {
+    path: '/books/:id',
+    nsme: 'bookEdit',
+    component: () => import('../views/BookEdit.vue')
   },
   {
     path: '/authors',
@@ -65,6 +72,11 @@ const routes = [
     path: '/issues',
     name: 'Issues',
     component: () => import('../views/Issues.vue')
+  },
+  {
+    path: '/members',
+    name: 'Members',
+    component: () => import('../views/Members.vue')
   }
   // {
   //   path: '/about',

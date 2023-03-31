@@ -1,6 +1,6 @@
 <template>
 <div>
-    <app-header></app-header>
+    <app-header :title="mytitle"></app-header>
     <v-btn text>Issued</v-btn>
     <v-btn text>Requested</v-btn>
     <v-list>
@@ -51,7 +51,8 @@ import AppHeader from '@/components/AppHeader.vue'
 export default {
     data() {
         return {
-            issues: IssuesList
+            issues: IssuesList,
+            mytitle: 'Issued Books'
         }
     },
     components: {
