@@ -20,7 +20,7 @@
         },
         mounted () {
             this.id = this.$route.params.id;
-            this.authoor = AuthorsList.find(rec => rec._id == this.id)
+            this.author = AuthorsList.find(rec => rec._id == this.id)
         },        
     }
 </script>
