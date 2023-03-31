@@ -50,12 +50,12 @@ const routes = [
   },
   {
     path: '/books/view/:id',
-    nsme: 'bookEdit',
+    name: 'bookEdit',
     component: () => import('../views/BookView.vue')
   },
   {
     path: '/books/:id',
-    nsme: 'bookEdit',
+    name: 'bookEdit',
     component: () => import('../views/BookEdit.vue')
   },
   {
@@ -65,13 +65,18 @@ const routes = [
   },
   {
     path: '/authors/:id',
-    nsme: 'authorEdit',
+    name: 'authorEdit',
     component: () => import('../views/AuthorEdit.vue')
   },
   {
     path: '/categories',
     name: 'Categories',
     component: () => import('../views/Categories.vue')
+  },
+  {
+    path: '/categories/:id',
+    name: 'categoryEdit',
+    component: () => import('../views/CategoryEdit.vue')
   },
   {
     path: '/issues',

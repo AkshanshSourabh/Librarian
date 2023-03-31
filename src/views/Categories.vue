@@ -1,6 +1,6 @@
 <template>
 <div>
-    <app-header :title="mytitle"></app-header>
+    <app-header :title="mytitle" @add="$router.push('/categories/0')" @search ="searchInCategory($event)"></app-header>
     <v-list>
         <v-list-item v-for="(item,i) in issues" :key="i">
 
@@ -18,7 +18,7 @@
                 </template>
                 <v-list>
                     <v-list>
-                        <v-list-item>
+                        <v-list-item @click="$router.push('/categories/' + item._id)">
                             <v-list-item-title>Edit</v-list-item-title>
                             <v-icon>mdi-pencil</v-icon>
                         </v-list-item>
@@ -48,6 +48,16 @@ export default {
     },
     components: {
         AppHeader
+    },
+    methods:{
+        searchInCategory(searchText){
+          if (typeof searchText === "string"){
+            this.issues = IssuesList.filter(rec => rec.member.name.toLowerCase().includes(searchText.toLowerCase()))
+          }
+          else{
+            this.issues = IssuesList
+          }
+        }
     }
 
 }

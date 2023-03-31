@@ -20,7 +20,7 @@
                                 <v-list-item-title>Edit</v-list-item-title>
                                 <v-icon>mdi-pencil</v-icon>
                             </v-list-item>
-                            <v-list-item>
+                            <v-list-item @click="$emit('delete')">
                                 <v-list-item-title>Delete</v-list-item-title>
                                 <v-icon>mdi-delete</v-icon>
                             </v-list-item>                       
