@@ -1,6 +1,6 @@
 <template>
 <div>
-    <app-header></app-header>
+    <app-header :title="mytitle"></app-header>
     <v-list>
         <v-list-item v-for="(item,i) in authors" :key="i">
 
@@ -39,7 +39,9 @@ import AppHeader from '@/components/AppHeader.vue'
 export default {
     data() {
         return {
-            authors: AuthorsList
+            authors: AuthorsList,
+            mytitle: 'Authors'
+
         }
     },
     components: {

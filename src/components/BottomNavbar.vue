@@ -12,10 +12,20 @@
       <v-icon>mdi-badge-account</v-icon>
     </v-btn>
 
-    <v-btn value="nearby" @click= "$router.push('/')">
+    <v-btn value="nearby" @click= "$router.push('/members')">
       <span>Members</span>
 
       <v-icon>mdi-account</v-icon>
+    </v-btn>
+    <v-btn value="nearby" @click= "$router.push('/issues')">
+      <span>Issued Books</span>
+
+      <v-icon>mdi-account-box-multiple</v-icon>
+    </v-btn>
+    <v-btn value="nearby" @click= "$router.push('/categories')">
+      <span>Categories</span>
+
+      <v-icon>mdi-account-details</v-icon>
     </v-btn>
   </v-bottom-navigation>
 </template>
